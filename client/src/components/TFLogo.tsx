@@ -1,4 +1,4 @@
-import logoImg from "../assets/logo.jpeg";
+import logoImg from "../assets/image_1772729499635.jpeg";
 
 interface TFLogoProps {
   size?: number;
@@ -8,14 +8,14 @@ interface TFLogoProps {
 export function TFLogo({ size = 40, className = "" }: TFLogoProps) {
   return (
     <div
-      className={`inline-flex items-center justify-center rounded-lg overflow-hidden flex-shrink-0 bg-slate-900/80 border border-amber-500/30 ${className}`}
+      className={`inline-flex items-center justify-center rounded-lg overflow-hidden flex-shrink-0 ${className}`}
       style={{ width: size, height: size }}
       data-testid="img-logo"
     >
       <img
         src={logoImg}
         alt="TwinForce Logo"
-        className="w-[90%] h-[90%] object-contain"
+        className="w-full h-full object-contain"
       />
     </div>
   );
