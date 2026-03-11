@@ -1,3 +1,5 @@
+import logoImg from "../assets/logo.jpeg";
+
 interface TFLogoProps {
   size?: number;
   className?: string;
@@ -10,12 +12,11 @@ export function TFLogo({ size = 40, className = "" }: TFLogoProps) {
       style={{ width: size, height: size }}
       data-testid="img-logo"
     >
-      <div
-        className="w-[90%] h-[90%] flex items-center justify-center font-extrabold text-amber-500"
-        style={{ fontSize: size * 0.32 }}
-      >
-        TF
-      </div>
+      <img
+        src={logoImg}
+        alt="TwinForce Logo"
+        className="w-[90%] h-[90%] object-contain"
+      />
     </div>
   );
 }
@@ -30,6 +31,7 @@ export function TFLogoWithText({
   return (
     <div className="flex items-center gap-3" data-testid="img-logo">
       <TFLogo size={size} />
+
       <div className="leading-tight">
         <span
           className={`font-extrabold text-lg sm:text-xl tracking-wide block ${
@@ -38,6 +40,7 @@ export function TFLogoWithText({
         >
           TWINFORCE
         </span>
+
         <span
           className={`text-[9px] sm:text-[10px] tracking-[0.25em] uppercase font-medium block ${
             scrolled ? "text-slate-400 dark:text-slate-400" : "text-slate-400"
