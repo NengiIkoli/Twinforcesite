@@ -1,4 +1,4 @@
-import logoImg from "../assets/image_1772729499635.jpeg";
+import logoImg from "../assets/image_1772731004005.jpeg";
 
 interface TFLogoProps {
   size?: number;
